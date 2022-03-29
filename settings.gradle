@@ -1,0 +1,3 @@
+rootProject.name = "rongcloud-scene-common-android"
+include ':app'
+include ':common'
