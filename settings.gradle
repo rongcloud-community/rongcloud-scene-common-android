@@ -1,3 +1,4 @@
 rootProject.name = "rongcloud-scene-common-android"
 include ':app'
 include ':common'
+include ':middle:config', ':middle:mhui', ':middle:music', ':middle:pk', ':middle:profile', ':middle:roomkit'

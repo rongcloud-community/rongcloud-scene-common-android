@@ -43,7 +43,12 @@ dependencies {
     implementation android_ui.appcompat
     implementation android_ui.material
 
-    // common
-    implementation project(path: ':common')
+    implementation project(rcLocalLib.common)
+    implementation project(rcLocalLib.config)
+    implementation project(rcLocalLib.mhui)
+    implementation project(rcLocalLib.music)
+    implementation project(rcLocalLib.pk)
+    implementation project(rcLocalLib.profile)
+    implementation project(rcLocalLib.roomkit)
 
 }
