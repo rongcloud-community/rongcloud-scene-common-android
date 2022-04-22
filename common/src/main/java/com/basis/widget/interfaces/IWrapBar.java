@@ -11,12 +11,15 @@ import androidx.annotation.StringRes;
  * ActionBar 包装类
  */
 public interface IWrapBar<T extends IWrapBar> {
+    int DEFAULT_ELEVATION = 12;
 
     T setHide(boolean hide);
 
     T setBackHide(boolean hide);
 
     T setTitle(@StringRes int title);
+
+    T setElevation(float elevation);
 
     T setTitle(String title);
 

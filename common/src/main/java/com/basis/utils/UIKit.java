@@ -67,7 +67,7 @@ public class UIKit {
         return (T) parent.findViewById(viewId);
     }
 
-    public static <T extends View> void setVisiable(T t, boolean visiable) {
+    public static <T extends View> void setVisible(T t, boolean visiable) {
         if (null == t) return;
         t.setVisibility(visiable ? View.VISIBLE : View.GONE);
     }

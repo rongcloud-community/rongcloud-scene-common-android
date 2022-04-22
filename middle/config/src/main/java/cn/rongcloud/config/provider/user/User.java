@@ -16,7 +16,6 @@ public class User implements Serializable, Provide {
     private String userId;
     private String userName;
     private String portrait;
-    private String sex;
     private int type;
     private String authorization;
     private String imToken;
@@ -70,10 +69,6 @@ public class User implements Serializable, Provide {
 
     public void setUserName(String userName) {
         this.userName = userName;
-    }
-
-    public String getSex() {
-        return sex;
     }
 
     public void setSex(String sex) {

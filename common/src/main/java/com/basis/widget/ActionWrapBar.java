@@ -37,6 +37,7 @@ public class ActionWrapBar implements IWrapBar<ActionWrapBar> {
     private List<OpMenu> options;
     private OnMenuSelectedListener onMenuSelectedListener;
     private TextView tvTitle;
+    private float elevation = 0f;
 
     public ActionWrapBar(AppCompatActivity activity) {
         actionBar = activity.getSupportActionBar();
@@ -110,6 +111,12 @@ public class ActionWrapBar implements IWrapBar<ActionWrapBar> {
     }
 
     @Override
+    public ActionWrapBar setElevation(float elevation) {
+        this.elevation = elevation;
+        return this;
+    }
+
+    @Override
     public ActionWrapBar setBackIcon(@DrawableRes int res) {
         this.backRes = res;
         return this;
@@ -143,6 +150,7 @@ public class ActionWrapBar implements IWrapBar<ActionWrapBar> {
         if (null != actionBar) {
 //            if (null != title) actionBar.setTitle(title);
             if (null != title) tvTitle.setText(title);
+            if (elevation > -1) actionBar.setElevation(elevation);
             actionBar.setDisplayHomeAsUpEnabled(!backHide);
             actionBar.setHomeAsUpIndicator(backRes == -1 ? R.drawable.svg_back_black : backRes);
             if (noneBar) {
